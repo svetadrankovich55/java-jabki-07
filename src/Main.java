@@ -73,10 +73,15 @@ public class Main {
         }
 
         for (Account a : accounts) {
+            a.deposit(50);
             a.withdraw(550);
             a.displayInfo();
             System.out.println();
         }
+
+        SavingsAccount savingsAccount = new SavingsAccount("SAV001", 2000, 3.5);
+        savingsAccount.applyInterest();
+        System.out.println("Сумма баланса с начисленными процентами: " +  savingsAccount.getBalance());
 
         // 2. Система доставки
         System.out.println("\n 2. Система доставки \n");
