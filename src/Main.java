@@ -101,6 +101,7 @@ public class Main {
         animals.add(new Lion("Симба", 5));
         animals.add(new Lion("Муфаса", 8));
         animals.add(new Parrot("Гоша", 1));
+        animals.add(new Animal("Неизвестное животное", 1));
 
         for (Animal a : animals) {
             a.makeSound();
