@@ -29,15 +29,15 @@ public class Account {
     }
 
     public void withdraw(double amount) {
-        if (amount > 0) {
-            if (getBalance() >= amount) {
-                setBalance(getBalance() - amount);
-                System.out.println("Снятие " + amount + " успешно выполнено. Остаток средств на счете: " + getBalance());
-            } else {
-                System.out.println("Недостаточно средств на счете.");
-            }
+        if (amount <= 0) {
+            System.out.println("Сумма снятия должна быть больше 0.");
+        }
+
+        if (getBalance() >= amount) {
+            setBalance(getBalance() - amount);
+            System.out.println("Снятие " + amount + " успешно выполнено. Остаток средств на счете: " + getBalance());
         } else {
-            System.out.println("Сумма снятия должна быть положительной.");
+            System.out.println("Недостаточно средств на счете.");
         }
     }
 
